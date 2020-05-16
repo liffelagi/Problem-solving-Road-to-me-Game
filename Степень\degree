@@ -1,0 +1,23 @@
+using System;
+using System.Linq;
+using System.Numerics;
+
+class Program
+{
+     public class CSharpSrudy2
+    {
+        static void Main(string[] args)
+        {
+            string str = Console.ReadLine();
+            uint[] arr = str.Split(' ').Select(n1 => Convert.ToUInt32(n1)).ToArray();
+            BigInteger r = 1;
+            ulong a = arr[0];
+            ulong n = arr[1];
+            for (uint i = 0; i < n; i++)
+            {
+                r *= a;
+            }
+            Console.WriteLine(r);
+        }
+    }
+}
